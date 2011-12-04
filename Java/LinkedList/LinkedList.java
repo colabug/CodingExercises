@@ -24,6 +24,25 @@ public class LinkedList {
         }
     }
 
+    public void addBack(int nodeData)
+    {
+        // Empty list, made node head
+        if (isEmpty())
+        {
+            createNewHeadNode(nodeData);
+            return;
+        }
+
+        // Find back of list
+        Node currentNode = head;
+        for ( ; currentNode.next != null; currentNode = currentNode.next)
+        { }
+
+        // Add node to back
+        Node node = new Node(nodeData, null);
+        currentNode.next = node;
+    }
+
     private void createNewHeadNode(int nodeData)
     {
         Node node = new Node(nodeData, null);
