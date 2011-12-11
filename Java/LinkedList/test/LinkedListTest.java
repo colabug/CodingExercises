@@ -7,6 +7,7 @@ import static junit.framework.Assert.assertTrue;
 public class LinkedListTest
 {
     private LinkedList ll;
+    private static int nodeData  = 4;
 
     @Before
     public void setUp()
@@ -21,4 +22,18 @@ public class LinkedListTest
         // Confirm list is empty
         assertTrue( ll.isEmpty() );
     }
+
+    @Test
+    public void testAddFront()
+    {
+        // Add element
+        ll.addFront( nodeData );
+
+        // Confirm not empty
+        assertTrue( !ll.isEmpty() );
+
+        // Confirm element is at front of list
+        assertEquals( nodeData, ll.getHead() );
+    }
+
 }
