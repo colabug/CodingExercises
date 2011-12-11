@@ -208,6 +208,7 @@ public class LinkedListTest
         assertEquals( nodeData2, ll.getHead() );
     }
 
+    @Ignore
     private int createGeneralList()
     {
         ll.addBack( nodeData );
