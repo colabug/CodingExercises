@@ -143,4 +143,20 @@ public class LinkedListTest
         // Confirm size
         assertEquals( 4, ll.size() );
     }
+
+    @Test
+    public void testToStringFromAddingFront()
+    {
+        ll.addFront( nodeData );
+        ll.addFront( nodeData2 );
+        ll.addFront( nodeData3 );
+        ll.addFront( nodeData4 );
+
+        // Confirm string is correct
+        String expectedString = nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
+        assertEquals( expectedString, ll.toString() );
+
+        // Confirm size
+        assertEquals( 4, ll.size() );
+    }
 }
