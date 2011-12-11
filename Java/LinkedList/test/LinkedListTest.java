@@ -4,6 +4,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 public class LinkedListTest
@@ -187,6 +188,7 @@ public class LinkedListTest
         confirmSize( 0 );
         ll.removeHead();
         confirmSize( 0 );
+        assertNull( ll.getHead() );
     }
 
     @Test
