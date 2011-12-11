@@ -276,9 +276,8 @@ public class LinkedListTest
     @Test
     public void testRemoveTailFrom2ElementList()
     {
-        // Add element & remove from back
-        ll.addBack( nodeData );
-        ll.addBack( nodeData2 );
+        // Add elements & remove one from back
+        create2ElementList();
         ll.removeTail();
 
         // Confirm list shortened and new tail chosen
