@@ -36,8 +36,12 @@ public class LinkedListTest
         // Confirm not empty
         assertTrue( !ll.isEmpty() );
 
-        // Confirm element is at front of list
+        // Confirm size
+        assertEquals( 1, ll.size() );
+
+        // Confirm element is at front and tail of list
         assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Test
@@ -47,8 +51,14 @@ public class LinkedListTest
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
 
-        // Confirm second added element is at the front
+        // Confirm second element added is the head
         assertEquals( nodeData2, ll.getHead() );
+
+        // Confirm first element added is the tail
+        assertEquals( nodeData, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 2, ll.size() );
     }
 
     @Test
@@ -57,8 +67,12 @@ public class LinkedListTest
         // Add back
         ll.addBack( nodeData );
 
-        // Confirm element added is the tail
+        // Confirm element is head and tail
+        assertEquals( nodeData, ll.getHead() );
         assertEquals( nodeData, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 1, ll.size() );
     }
 
     @Test
@@ -68,8 +82,14 @@ public class LinkedListTest
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
 
+        // Confirm first element added is the head
+        assertEquals( nodeData, ll.getHead() );
+
         // Confirm last element added is the tail
         assertEquals( nodeData2, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 2, ll.size() );
     }
 
     @Test
@@ -80,7 +100,11 @@ public class LinkedListTest
         ll.addBack( nodeData3 );
         ll.addBack( nodeData4 );
 
+        // Confirm string is correct
         String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
         assertEquals( expectedString, ll.toString() );
+
+        // Confirm size
+        assertEquals( 4, ll.size() );
     }
 }

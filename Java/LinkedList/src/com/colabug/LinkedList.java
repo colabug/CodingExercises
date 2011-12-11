@@ -19,6 +19,7 @@ public class LinkedList
         if (isEmpty())
         {
             createNewHeadNode(nodeData);
+            return;
         }
         // Populated list
         else
@@ -59,6 +60,7 @@ public class LinkedList
         Node node = new Node(nodeData, null);
         head = node;
         tail = head;
+        size++;
     }
 
     public boolean isEmpty()
