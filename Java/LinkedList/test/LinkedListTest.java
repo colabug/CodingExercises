@@ -184,7 +184,7 @@ public class LinkedListTest
     @Test
     public void testRemoveHeadFromEmptyList()
     {
-        assertTrue( ll.isEmpty() );
+        confirmSize( 0 );
         ll.removeHead();
         confirmSize( 0 );
     }
