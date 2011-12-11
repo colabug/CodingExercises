@@ -3,4 +3,7 @@
 *.swp
 *blah*
 Java/LinkedList/.idea/*
+Java/LinkedList/out/*
 Java/LinkedList/LinkedList.iml
+Java/Stack/.idea/*
+Java/Stack/STack.iml
