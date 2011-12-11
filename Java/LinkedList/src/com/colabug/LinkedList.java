@@ -13,18 +13,18 @@ public class LinkedList
         head = null;
     }
 
-    public void addFront(int nodeData)
+    public void addFront( int nodeData )
     {
         // Empty list, made node head
-        if (isEmpty())
+        if ( isEmpty() )
         {
-            createNewHeadNode(nodeData);
+            createNewHeadNode( nodeData );
             return;
         }
         // Populated list
         else
         {
-            Node node = new Node(nodeData, head);
+            Node node = new Node( nodeData, head );
             head = node;
         }
 
@@ -32,22 +32,23 @@ public class LinkedList
         size++;
     }
 
-    public void addBack(int nodeData)
+    public void addBack( int nodeData )
     {
         // Empty list, made node head
-        if (isEmpty())
+        if ( isEmpty() )
         {
-            createNewHeadNode(nodeData);
+            createNewHeadNode( nodeData );
             return;
         }
 
         // Find back of list
         Node currentNode = head;
-        for ( ; currentNode.next != null; currentNode = currentNode.next)
-        { }
+        for (; currentNode.next != null; currentNode = currentNode.next )
+        {
+        }
 
         // Add node to back
-        Node node = new Node(nodeData, null);
+        Node node = new Node( nodeData, null );
         currentNode.next = node;
         tail = node;
 
@@ -55,9 +56,9 @@ public class LinkedList
         size++;
     }
 
-    private void createNewHeadNode(int nodeData)
+    private void createNewHeadNode( int nodeData )
     {
-        Node node = new Node(nodeData, null);
+        Node node = new Node( nodeData, null );
         head = node;
         tail = head;
         size++;
@@ -65,7 +66,7 @@ public class LinkedList
 
     public boolean isEmpty()
     {
-        if (head == null)
+        if ( head == null )
         {
             return true;
         }
@@ -76,12 +77,12 @@ public class LinkedList
     public void printList()
     {
         // Cycle through list
-        System.out.println("Nodes:");
-        for (Node currentNode = head;
-            currentNode != null;
-            currentNode = currentNode.next)
+        System.out.println( "Nodes:" );
+        for ( Node currentNode = head;
+              currentNode != null;
+              currentNode = currentNode.next )
         {
-            System.out.println(currentNode.data);
+            System.out.println( currentNode.data );
         }
     }
 
@@ -106,9 +107,9 @@ public class LinkedList
         String string = "";
 
         // Cycle through list
-        for (Node currentNode = head;
-            currentNode != null;
-            currentNode = currentNode.next)
+        for ( Node currentNode = head;
+              currentNode != null;
+              currentNode = currentNode.next )
         {
             string += currentNode.data + " ";
         }
@@ -128,7 +129,7 @@ public class LinkedList
             clearMostlyDeadList();
         }
         // Greater than one
-        else if (size > 1)
+        else if ( size > 1 )
         {
             // Remove node
             Node newHead = head.next;
@@ -157,12 +158,12 @@ public class LinkedList
             clearMostlyDeadList();
         }
         // Greater than one
-        else if (size > 1)
+        else if ( size > 1 )
         {
             // Navigate to the node before the tail
             Node newTail = head;
-            for ( ; newTail.next != tail;
-                  newTail = newTail.next )
+            for (; newTail.next != tail;
+                 newTail = newTail.next )
             {
             }
 
