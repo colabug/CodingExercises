@@ -211,6 +211,25 @@ public class LinkedListTest
     }
 
     @Test
+    public void testRemoveHeadFrom2ElementList()
+    {
+        // Add elements & remove one from front
+        create2ElementList();
+        ll.removeHead();
+
+        // Confirm list shortened and changed
+        confirmSize( 1 );
+        assertEquals( nodeData2, ll.getHead().data );
+    }
+
+    @Ignore
+    private void create2ElementList()
+    {
+        ll.addFront( nodeData );
+        ll.addBack( nodeData2 );
+    }
+
+    @Test
     public void testRemoveHeadFromGeneralList()
     {
         // Create list and remove head
