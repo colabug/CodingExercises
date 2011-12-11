@@ -189,4 +189,12 @@ public class LinkedListTest
         ll.removeHead();
         confirmSize( 0 );
     }
+
+    @Test
+    public void testRemoveHeadFrom1ElementList()
+    {
+        ll.addFront( nodeData );
+        ll.removeHead();
+        confirmSize( 0 );
+    }
 }
