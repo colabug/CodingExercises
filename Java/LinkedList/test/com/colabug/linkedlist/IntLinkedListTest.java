@@ -1,4 +1,4 @@
-import com.colabug.LinkedList;
+package com.colabug.linkedlist;
 
 import org.junit.Before;
 import org.junit.Ignore;

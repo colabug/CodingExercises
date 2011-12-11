@@ -1,4 +1,4 @@
-package com.colabug;
+package com.colabug.linkedlist;
 
 public class Node<T>
 {
