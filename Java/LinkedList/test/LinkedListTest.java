@@ -129,6 +129,26 @@ public class LinkedListTest
     }
 
     @Test
+    public void testMixedElementAddition()
+    {
+        // Add elements
+        ll.addFront( nodeData );  // 4
+        ll.addBack( nodeData2 );  // 17
+        ll.addFront( nodeData3 ); // 2
+        ll.addBack( nodeData4 );  // 3
+        // End list: 2 4 17 3
+
+        // Confirm head element
+        assertEquals( nodeData3, ll.getHead() );
+
+        // Confirm tail element
+        assertEquals( nodeData4, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 4, ll.size() );
+    }
+
+    @Test
     public void testToStringFromAddingBack()
     {
         ll.addBack( nodeData );
