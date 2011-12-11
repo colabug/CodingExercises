@@ -213,6 +213,7 @@ public class LinkedListTest
     @Test
     public void testRemoveHeadFromGeneralList()
     {
+        // Create list and remove head
         int size = createGeneralList();
         ll.removeHead();
 
@@ -251,5 +252,17 @@ public class LinkedListTest
 
         // Confirm list is empty
         confirmListIsEmpty();
+    }
+
+    @Test
+    public void testRemoveTailFromGeneralList()
+    {
+        // Create list and remove tail
+        int size = createGeneralList();
+        ll.removeTail();
+
+        // Confirm list shortened and new tail chosen
+        confirmSize( size - 1 );
+        assertEquals( nodeData3, ll.getTail().data );
     }
 }

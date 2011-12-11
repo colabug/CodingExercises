@@ -156,6 +156,23 @@ public class LinkedList
         {
             clearMostlyDeadList();
         }
+        // Greater than one
+        else if (size > 1)
+        {
+            // Navigate to the node before the tail
+            Node newTail = head;
+            for ( ; newTail.next != tail;
+                  newTail = newTail.next )
+            {
+            }
+
+            // Set new tail
+            newTail.next = null;
+            tail = newTail;
+
+            // Update size
+            size--;
+        }
         // Something bad happened
         else
         {
