@@ -2,3 +2,5 @@
 *.diff
 *.swp
 *blah*
+Java/LinkedList/.idea/*
+Java/LinkedList/LinkedList.iml
