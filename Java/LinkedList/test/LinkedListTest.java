@@ -202,8 +202,9 @@ public class LinkedListTest
     {
         ll.addFront( nodeData );
         ll.removeHead();
-        assertNull( ll.getHead() );
-        confirmSize( 0 );
+
+        // Confirm list is empty
+        confirmListIsEmpty();
     }
 
     @Test

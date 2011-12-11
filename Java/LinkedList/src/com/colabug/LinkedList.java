@@ -126,6 +126,7 @@ public class LinkedList
         else if ( size == 1 )
         {
             head = null;
+            tail = null;
             size = 0;
         }
         // Greater than one
