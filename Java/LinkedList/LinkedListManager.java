@@ -16,7 +16,9 @@ public class LinkedListManager
         {
             System.out.println("Creating node! Position = " + i);
             ll.addFront(Integer.valueOf(argv[i]));
-            ll.addBack(Integer.valueOf(argv[i]));
         }
+
+        // Print list
+        ll.printList();
     }
 }

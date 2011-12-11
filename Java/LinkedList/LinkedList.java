@@ -1,7 +1,7 @@
 import java.lang.*;
 
-public class LinkedList {
-    
+public class LinkedList
+{
     Node head;
 
     LinkedList()
@@ -61,6 +61,13 @@ public class LinkedList {
 
     public void printList()
     {
-        // TODO:
+        // Cycle through list
+        System.out.println("Nodes:");
+        for (Node currentNode = head;
+            currentNode != null;
+            currentNode = currentNode.next)
+        {
+            System.out.println(currentNode.data);
+        }
     }
 }
