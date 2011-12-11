@@ -6,19 +6,19 @@ import org.junit.Test;
 
 import static junit.framework.Assert.*;
 
-public class LinkedListTest
+public class IntLinkedListTest
 {
-    private LinkedList ll;
-    private static int nodeData  = 4;
-    private static int nodeData2 = 17;
-    private static int nodeData3 = 2;
-    private static int nodeData4 = 3;
+    private LinkedList<Integer> ll;
+    private static Integer nodeData  = 4;
+    private static Integer nodeData2 = 17;
+    private static Integer nodeData3 = 2;
+    private static Integer nodeData4 = 3;
 
     @Before
     public void setUp()
     {
         // Create empty linked list
-        ll = new LinkedList();
+        ll = new LinkedList<Integer>();
     }
 
     @Test

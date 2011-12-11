@@ -2,7 +2,7 @@ package com.colabug;
 
 import java.lang.*;
 
-public class LinkedList
+public class LinkedList<T>
 {
     private Node head;
     private Node tail;
@@ -13,7 +13,7 @@ public class LinkedList
         head = null;
     }
 
-    public void addFront( int nodeData )
+    public void addFront( T nodeData )
     {
         // Empty list, made node head
         if ( isEmpty() )
@@ -24,15 +24,14 @@ public class LinkedList
         // Populated list
         else
         {
-            Node node = new Node( nodeData, head );
-            head = node;
+            head = new Node<T>( nodeData, head );
         }
 
         // Increase size
         size++;
     }
 
-    public void addBack( int nodeData )
+    public void addBack( T nodeData )
     {
         // Empty list, made node head
         if ( isEmpty() )
@@ -48,7 +47,7 @@ public class LinkedList
         }
 
         // Add node to back
-        Node node = new Node( nodeData, null );
+        Node<T> node = new Node<T>( nodeData, null );
         currentNode.next = node;
         tail = node;
 
@@ -56,10 +55,9 @@ public class LinkedList
         size++;
     }
 
-    private void createNewHeadNode( int nodeData )
+    private void createNewHeadNode( T nodeData )
     {
-        Node node = new Node( nodeData, null );
-        head = node;
+        head = new Node<T>( nodeData, null );
         tail = head;
         size++;
     }
