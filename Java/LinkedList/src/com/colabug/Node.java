@@ -1,7 +1,5 @@
 package com.colabug;
 
-import java.lang.*;
-
 public class Node
 {
     public int data;
