@@ -21,22 +21,22 @@ public class LinkedListManager
     {
         if (arguments.length <= 0)
         {
-            System.out.println("No nodes to create");
+            System.out.println( "No nodes to create" );
             return;
         }
 
         // Process node data
-        for (int i = 0; i < arguments.length; i++)
+        for ( String argument : arguments )
         {
-            System.out.println("Creating node! Position = " + i);
-            ll.addFront(Integer.valueOf(arguments[i]));
+            System.out.println( "Adding node to front: " + argument );
+            ll.addFront( Integer.valueOf( argument ) );
         }
 
         // Print size
         System.out.println("Size " + ll.size());
 
         // Add first element to back of list
-        System.out.println("Adding node to back of list.");
+        System.out.println("Adding node to back: " + arguments[0]);
         ll.addBack(Integer.valueOf(arguments[0]));
 
         // Print size
