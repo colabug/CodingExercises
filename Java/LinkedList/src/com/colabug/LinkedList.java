@@ -188,20 +188,20 @@ public class LinkedList
         size = 0;
     }
 
-    public void removeAtIndex( int i )
+    public void removeAtIndex( int index )
     {
-        if ( i >= size || i < 0 )
+        if ( index >= size || index < 0 )
         {
-            throw new IndexOutOfBoundsException( "Index " + i + " is outside the bounds of the list. List size = " + size );
+            throw new IndexOutOfBoundsException( "Index " + index + " is outside the bounds of the list. List size = " + size );
         }
 
         // Remove head
-        if ( i == 0 )
+        if ( index == 0 )
         {
             removeHead();
         }
         // Remove tail
-        else if ( i == size - 1 )
+        else if ( index == size - 1 )
         {
             removeTail();
         }
@@ -212,7 +212,7 @@ public class LinkedList
             int count = 0;
             Node currentNode = head;
             Node previousNode = head;
-            for (; count < i; count++,
+            for (; count < index; count++,
                  previousNode = currentNode,
                  currentNode = currentNode.next )
             {
