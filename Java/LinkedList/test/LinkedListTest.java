@@ -10,6 +10,8 @@ public class LinkedListTest
     private LinkedList ll;
     private static int nodeData  = 4;
     private static int nodeData2 = 17;
+    private static int nodeData3 = 2;
+    private static int nodeData4 = 3;
 
     @Before
     public void setUp()
@@ -68,5 +70,17 @@ public class LinkedListTest
 
         // Confirm last element added is the tail
         assertEquals( nodeData2, ll.getTail() );
+    }
+
+    @Test
+    public void testToStringFromAddingBack()
+    {
+        ll.addBack( nodeData );
+        ll.addBack( nodeData2 );
+        ll.addBack( nodeData3 );
+        ll.addBack( nodeData4 );
+
+        String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
+        assertEquals( expectedString, ll.toString() );
     }
 }
