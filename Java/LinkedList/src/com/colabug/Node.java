@@ -1,6 +1,8 @@
+package com.colabug;
+
 import java.lang.*;
 
-public class Node 
+public class Node
 {
     public int data;
     public Node next;

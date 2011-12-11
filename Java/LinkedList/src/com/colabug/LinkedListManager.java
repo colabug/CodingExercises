@@ -1,10 +1,12 @@
+package com.colabug;
+
 import java.lang.*;
 
 public class LinkedListManager
 {
     LinkedList ll;
 
-    LinkedListManager() 
+    LinkedListManager()
     {
         ll = new LinkedList();
     }
@@ -12,7 +14,7 @@ public class LinkedListManager
     public void createLinkedListManager(String argv[])
     {
         // Process node data
-        for (int i = 0; i < argv.length; i++) 
+        for (int i = 0; i < argv.length; i++)
         {
             System.out.println("Creating node! Position = " + i);
             ll.addFront(Integer.valueOf(argv[i]));

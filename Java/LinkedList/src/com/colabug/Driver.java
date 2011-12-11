@@ -1,3 +1,5 @@
+package com.colabug;
+
 import java.lang.*;
 
 public class Driver
@@ -6,7 +8,7 @@ public class Driver
 
     public static void main(String argv[])
     {
-        // Greet user 
+        // Greet user
         System.out.println("Hello");
 
         // Create linked list

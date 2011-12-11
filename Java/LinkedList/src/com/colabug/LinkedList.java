@@ -1,11 +1,14 @@
+package com.colabug;
+
 import java.lang.*;
 
 public class LinkedList
 {
-    Node head;
-    int size = 0;
+    private Node head;
+    private Node tail;
+    private int size = 0;
 
-    LinkedList()
+    public LinkedList()
     {
         head = null;
     }
@@ -45,6 +48,7 @@ public class LinkedList
         // Add node to back
         Node node = new Node(nodeData, null);
         currentNode.next = node;
+        tail = node;
 
         // Increase size
         size++;
@@ -54,6 +58,7 @@ public class LinkedList
     {
         Node node = new Node(nodeData, null);
         head = node;
+        tail = head;
     }
 
     public boolean isEmpty()
@@ -81,5 +86,31 @@ public class LinkedList
     public int size()
     {
         return size;
+    }
+
+    public int getHead()
+    {
+        return head.data;
+    }
+
+    public int getTail()
+    {
+        return tail.data;
+    }
+
+    @Override
+    public String toString()
+    {
+        String string = "";
+
+        // Cycle through list
+        for (Node currentNode = head;
+            currentNode != null;
+            currentNode = currentNode.next)
+        {
+            string += currentNode.data + " ";
+        }
+
+        return string.trim();
     }
 }
