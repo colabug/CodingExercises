@@ -39,10 +39,8 @@ public class LinkedListTest
     @Test
     public void testAddFront()
     {
-        // Add element
+        // Add element & confirm size
         ll.addFront( nodeData );
-
-        // Confirm size
         confirmSize( 1 );
 
         // Confirm element is at front and tail of list
@@ -72,7 +70,7 @@ public class LinkedListTest
     @Test
     public void testAdd2ElementsToFront()
     {
-        // Add elements
+        // Add elements and confirm size
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
         confirmSize( 2 );
@@ -87,7 +85,7 @@ public class LinkedListTest
     @Test
     public void testAdd3ElementsToFront()
     {
-        // Add elements
+        // Add elements and confirm size
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
         ll.addFront( nodeData3 );
@@ -103,6 +101,7 @@ public class LinkedListTest
     @Test
     public void testToStringFromAddingFront()
     {
+        // Add elements and confirm size
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
         ll.addFront( nodeData3 );
@@ -117,7 +116,7 @@ public class LinkedListTest
     @Test
     public void testAddBack()
     {
-        // Add back
+        // Add element and confirm size
         ll.addBack( nodeData );
         confirmSize( 1 );
 
@@ -129,7 +128,7 @@ public class LinkedListTest
     @Test
     public void testAdd2ElementsToBack()
     {
-        // Add elements
+        // Add elements and confirm size
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
         confirmSize( 2 );
@@ -144,7 +143,7 @@ public class LinkedListTest
     @Test
     public void testAdd3ElementsToBack()
     {
-        // Add elements
+        // Add elements and confirm size
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
         ll.addBack( nodeData3 );
@@ -160,6 +159,7 @@ public class LinkedListTest
     @Test
     public void testToStringFromAddingBack()
     {
+        // Add elements and confirm size
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
         ll.addBack( nodeData3 );
@@ -174,7 +174,7 @@ public class LinkedListTest
     @Test
     public void testMixedElementAddition()
     {
-        // Add elements
+        // Add elements and confirm size
         ll.addFront( nodeData );  // 4
         ll.addBack( nodeData2 );  // 17
         ll.addFront( nodeData3 ); // 2
@@ -194,12 +194,15 @@ public class LinkedListTest
     {
         confirmListIsEmpty();
         ll.removeHead();
+
+        // Confirm list is empty
         confirmListIsEmpty();
     }
 
     @Test
     public void testRemoveHeadFrom1ElementList()
     {
+        // Add element & remove from front
         ll.addFront( nodeData );
         ll.removeHead();
 
