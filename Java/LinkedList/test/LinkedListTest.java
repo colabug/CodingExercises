@@ -111,6 +111,24 @@ public class LinkedListTest
     }
 
     @Test
+    public void testAdd3ElementsToBack()
+    {
+        // Add elements
+        ll.addBack( nodeData );
+        ll.addBack( nodeData2 );
+        ll.addBack( nodeData3 );
+
+        // Confirm first element added is the head
+        assertEquals( nodeData, ll.getHead() );
+
+        // Confirm last element added is the tail
+        assertEquals( nodeData3, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 3, ll.size() );
+    }
+
+    @Test
     public void testToStringFromAddingBack()
     {
         ll.addBack( nodeData );
