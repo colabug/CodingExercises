@@ -1,11 +1,11 @@
 package com.colabug;
 
-public class Node
+public class Node<T>
 {
-    public int  data;
+    public T    data;
     public Node next;
 
-    Node( int data, Node next )
+    Node( T data, Node next )
     {
         this.data = data;
         this.next = next;
