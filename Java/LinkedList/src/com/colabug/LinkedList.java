@@ -224,4 +224,9 @@ public class LinkedList
             size--;
         }
     }
+
+    public void clear()
+    {
+        // TODO: Remove each element
+    }
 }

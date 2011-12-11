@@ -355,4 +355,12 @@ public class LinkedListTest
         confirmSize( size - 1 );
         assertEquals( expectedString, ll.toString() );
     }
+
+    @Test
+    public void testClearList()
+    {
+        int size = createGeneralList();
+        ll.clear();
+//        confirmListIsEmpty();
+    }
 }
