@@ -62,6 +62,24 @@ public class LinkedListTest
     }
 
     @Test
+    public void testAdd3ElementsToFront()
+    {
+        // Add elements
+        ll.addFront( nodeData );
+        ll.addFront( nodeData2 );
+        ll.addFront( nodeData3 );
+
+        // Confirm third element added is the head
+        assertEquals( nodeData3, ll.getHead() );
+
+        // Confirm first element added is the tail
+        assertEquals( nodeData, ll.getTail() );
+
+        // Confirm size
+        assertEquals( 3, ll.size() );
+    }
+
+    @Test
     public void testAddBack()
     {
         // Add back
