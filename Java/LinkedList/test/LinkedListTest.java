@@ -23,14 +23,14 @@ public class LinkedListTest
     }
 
     @Test
-    public void newListIsEmpty() throws IllegalStateException
+    public void newListIsEmpty()
     {
         // Confirm list is empty
         confirmSize( 0 );
     }
 
     @Test
-    public void testAddFront() throws IllegalStateException
+    public void testAddFront()
     {
         // Add element
         ll.addFront( nodeData );
@@ -44,7 +44,7 @@ public class LinkedListTest
     }
 
     @Ignore
-    private void confirmSize( int expectedSize ) throws IllegalStateException
+    private void confirmSize( int expectedSize )
     {
         if ( expectedSize == 0 )
         {
@@ -63,7 +63,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd2ElementsToFront() throws IllegalStateException
+    public void testAdd2ElementsToFront()
     {
         // Add elements
         ll.addFront( nodeData );
@@ -78,7 +78,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd3ElementsToFront() throws IllegalStateException
+    public void testAdd3ElementsToFront()
     {
         // Add elements
         ll.addFront( nodeData );
@@ -94,7 +94,21 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAddBack() throws IllegalStateException
+    public void testToStringFromAddingFront()
+    {
+        ll.addFront( nodeData );
+        ll.addFront( nodeData2 );
+        ll.addFront( nodeData3 );
+        ll.addFront( nodeData4 );
+        confirmSize( 4 );
+
+        // Confirm string is correct
+        String expectedString = nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
+        assertEquals( expectedString, ll.toString() );
+    }
+
+    @Test
+    public void testAddBack()
     {
         // Add back
         ll.addBack( nodeData );
@@ -106,7 +120,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd2ElementsToBack() throws IllegalStateException
+    public void testAdd2ElementsToBack()
     {
         // Add elements
         ll.addBack( nodeData );
@@ -121,7 +135,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd3ElementsToBack() throws IllegalStateException
+    public void testAdd3ElementsToBack()
     {
         // Add elements
         ll.addBack( nodeData );
@@ -137,7 +151,21 @@ public class LinkedListTest
     }
 
     @Test
-    public void testMixedElementAddition() throws IllegalStateException
+    public void testToStringFromAddingBack()
+    {
+        ll.addBack( nodeData );
+        ll.addBack( nodeData2 );
+        ll.addBack( nodeData3 );
+        ll.addBack( nodeData4 );
+        confirmSize( 4 );
+
+        // Confirm string is correct
+        String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
+        assertEquals( expectedString, ll.toString() );
+    }
+
+    @Test
+    public void testMixedElementAddition()
     {
         // Add elements
         ll.addFront( nodeData );  // 4
@@ -154,31 +182,4 @@ public class LinkedListTest
         assertEquals( nodeData4, ll.getTail() );
     }
 
-    @Test
-    public void testToStringFromAddingBack() throws IllegalStateException
-    {
-        ll.addBack( nodeData );
-        ll.addBack( nodeData2 );
-        ll.addBack( nodeData3 );
-        ll.addBack( nodeData4 );
-        confirmSize( 4 );
-
-        // Confirm string is correct
-        String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
-        assertEquals( expectedString, ll.toString() );
-    }
-
-    @Test
-    public void testToStringFromAddingFront() throws IllegalStateException
-    {
-        ll.addFront( nodeData );
-        ll.addFront( nodeData2 );
-        ll.addFront( nodeData3 );
-        ll.addFront( nodeData4 );
-        confirmSize( 4 );
-
-        // Confirm string is correct
-        String expectedString = nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
-        assertEquals( expectedString, ll.toString() );
-    }
 }
