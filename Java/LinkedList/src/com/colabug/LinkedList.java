@@ -119,7 +119,7 @@ public class LinkedList
     public void removeHead()
     {
         // Empty list
-        if ( isEmpty() )
+        if ( size == 0 )
         {
         }
         // Single item list
@@ -142,7 +142,7 @@ public class LinkedList
 
     public void removeTail()
     {
-        if ( isEmpty() )
+        if ( size == 0 )
         {
             return;
         }
