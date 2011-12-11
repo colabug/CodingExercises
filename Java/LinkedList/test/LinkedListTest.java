@@ -235,8 +235,10 @@ public class LinkedListTest
     @Test
     public void testRemoveTailFromEmptyList()
     {
-        confirmListIsEmpty();
+        // Remove tail from empty list
         ll.removeTail();
+
+        // Confirm list is empty
         confirmListIsEmpty();
     }
 }
