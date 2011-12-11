@@ -192,7 +192,7 @@ public class LinkedListTest
     @Test
     public void testRemoveHeadFromEmptyList()
     {
-        confirmListIsEmpty();
+        // Remove head from empty list
         ll.removeHead();
 
         // Confirm list is empty
