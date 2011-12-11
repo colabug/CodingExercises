@@ -23,14 +23,14 @@ public class LinkedListTest
     }
 
     @Test
-    public void newListIsEmpty()
+    public void newListIsEmpty() throws IllegalStateException
     {
         // Confirm list is empty
         assertTrue( ll.isEmpty() );
     }
 
     @Test
-    public void testAddFront()
+    public void testAddFront() throws IllegalStateException
     {
         // Add element
         ll.addFront( nodeData );
@@ -45,13 +45,26 @@ public class LinkedListTest
     }
 
     @Ignore
-    private void confirmSize( int expectedSize )
+    private void confirmSize( int expectedSize ) throws IllegalStateException
     {
+        if ( expectedSize == 0 )
+        {
+            assertTrue( ll.isEmpty() );
+        }
+        else if (expectedSize < 0 )
+        {
+            throw new IllegalStateException( "List can't have a negative size" );
+        }
+        else
+        {
+            assertTrue( !ll.isEmpty() );
+        }
+
         assertEquals( expectedSize, ll.size() );
     }
 
     @Test
-    public void testAdd2ElementsToFront()
+    public void testAdd2ElementsToFront() throws IllegalStateException
     {
         // Add elements
         ll.addFront( nodeData );
@@ -66,7 +79,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd3ElementsToFront()
+    public void testAdd3ElementsToFront() throws IllegalStateException
     {
         // Add elements
         ll.addFront( nodeData );
@@ -82,7 +95,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAddBack()
+    public void testAddBack() throws IllegalStateException
     {
         // Add back
         ll.addBack( nodeData );
@@ -94,7 +107,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd2ElementsToBack()
+    public void testAdd2ElementsToBack() throws IllegalStateException
     {
         // Add elements
         ll.addBack( nodeData );
@@ -109,7 +122,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testAdd3ElementsToBack()
+    public void testAdd3ElementsToBack() throws IllegalStateException
     {
         // Add elements
         ll.addBack( nodeData );
@@ -125,7 +138,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testMixedElementAddition()
+    public void testMixedElementAddition() throws IllegalStateException
     {
         // Add elements
         ll.addFront( nodeData );  // 4
@@ -143,7 +156,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testToStringFromAddingBack()
+    public void testToStringFromAddingBack() throws IllegalStateException
     {
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
@@ -157,7 +170,7 @@ public class LinkedListTest
     }
 
     @Test
-    public void testToStringFromAddingFront()
+    public void testToStringFromAddingFront() throws IllegalStateException
     {
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
