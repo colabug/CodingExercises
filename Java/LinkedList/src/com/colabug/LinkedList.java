@@ -227,6 +227,18 @@ public class LinkedList
 
     public void clear()
     {
-        // TODO: Remove each element
+        // Traverse list & remove elements
+        Node previousNode = head;
+        Node currentNode = head;
+        for (;
+             currentNode != null;
+             previousNode = currentNode, currentNode = currentNode.next )
+        {
+            previousNode.next = null;
+        }
+
+        // Clear other data
+        head = tail = null;
+        size = 0;
     }
 }

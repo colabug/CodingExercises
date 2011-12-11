@@ -359,8 +359,8 @@ public class LinkedListTest
     @Test
     public void testClearList()
     {
-        int size = createGeneralList();
+        createGeneralList();
         ll.clear();
-//        confirmListIsEmpty();
+        confirmListIsEmpty();
     }
 }
