@@ -3,6 +3,7 @@ import java.lang.*;
 public class LinkedList
 {
     Node head;
+    int size = 0;
 
     LinkedList()
     {
@@ -22,6 +23,9 @@ public class LinkedList
             Node node = new Node(nodeData, head.next);
             head = node;
         }
+
+        // Increase size
+        size++;
     }
 
     public void addBack(int nodeData)
@@ -41,6 +45,9 @@ public class LinkedList
         // Add node to back
         Node node = new Node(nodeData, null);
         currentNode.next = node;
+
+        // Increase size
+        size++;
     }
 
     private void createNewHeadNode(int nodeData)
@@ -69,5 +76,10 @@ public class LinkedList
         {
             System.out.println(currentNode.data);
         }
+    }
+
+    public int size()
+    {
+        return size;
     }
 }

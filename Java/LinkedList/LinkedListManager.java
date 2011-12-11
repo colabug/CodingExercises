@@ -18,6 +18,15 @@ public class LinkedListManager
             ll.addFront(Integer.valueOf(argv[i]));
         }
 
+        // Print size
+        System.out.println("Size " + ll.size());
+
+        // Add first element to back of list
+        ll.addBack(Integer.valueOf(argv[0]));
+
+        // Print size
+        System.out.println("Size " + ll.size());
+
         // Print list
         ll.printList();
     }
