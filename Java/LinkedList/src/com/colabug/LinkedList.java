@@ -128,7 +128,7 @@ public class LinkedList
             clearMostlyDeadList();
         }
         // Greater than one
-        else
+        else if (size > 1)
         {
             // Remove node
             Node newHead = head.next;
