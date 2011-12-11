@@ -218,4 +218,12 @@ public class LinkedListTest
 
         return 4;
     }
+
+    @Test
+    public void testRemoveTailFromEmptyList()
+    {
+        confirmSize( 0 );
+        ll.removeTail();
+        confirmSize( 0 );
+    }
 }

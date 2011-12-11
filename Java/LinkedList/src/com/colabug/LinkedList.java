@@ -140,4 +140,12 @@ public class LinkedList
             size--;
         }
     }
+
+    public void removeTail()
+    {
+        if ( isEmpty() )
+        {
+            return;
+        }
+    }
 }
