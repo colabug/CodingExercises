@@ -24,7 +24,7 @@ public class LinkedList
         // Populated list
         else
         {
-            Node node = new Node(nodeData, head.next);
+            Node node = new Node(nodeData, head);
             head = node;
         }
 
