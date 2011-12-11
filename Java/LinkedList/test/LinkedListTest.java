@@ -241,4 +241,15 @@ public class LinkedListTest
         // Confirm list is empty
         confirmListIsEmpty();
     }
+
+    @Test
+    public void testRemoveTailFrom1ElementList()
+    {
+        // Add element & remove from back
+        ll.addFront( nodeData );
+        ll.removeTail();
+
+        // Confirm list is empty
+        confirmListIsEmpty();
+    }
 }

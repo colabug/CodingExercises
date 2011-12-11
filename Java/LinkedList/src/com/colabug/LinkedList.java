@@ -146,6 +146,11 @@ public class LinkedList
         {
             return;
         }
+        // Single item list
+        else if ( size == 1 )
+        {
+            clearMostlyDeadList();
+        }
     }
 
     private void clearMostlyDeadList()
