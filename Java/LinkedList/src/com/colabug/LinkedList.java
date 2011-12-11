@@ -194,6 +194,14 @@ public class LinkedList
         {
             throw new IndexOutOfBoundsException( "Index " + i + " is outside the bounds of the list. List size = " + size );
         }
+
+        // Remove head
+        if ( i == 0 )
+        {
+            removeHead();
+            return;
+        }
+
         size--;
     }
 }

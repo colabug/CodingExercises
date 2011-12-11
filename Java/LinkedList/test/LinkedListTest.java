@@ -311,6 +311,18 @@ public class LinkedListTest
     }
 
     @Test
+    public void testRemoveElementWithHeadIndex()
+    {
+        // Create list & remove head
+        int size = createGeneralList();
+        ll.removeAtIndex( 0 );
+
+        // Confirm list shortened and new head chosen
+        confirmSize( size - 1 );
+        assertEquals( nodeData2, ll.getHead().data );
+    }
+
+    @Test
     public void testRemoveElementAtArbitraryIndex()
     {
         // Create list and index 3
