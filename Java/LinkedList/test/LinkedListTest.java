@@ -26,7 +26,7 @@ public class LinkedListTest
     public void newListIsEmpty() throws IllegalStateException
     {
         // Confirm list is empty
-        assertTrue( ll.isEmpty() );
+        confirmSize( 0 );
     }
 
     @Test
@@ -35,8 +35,7 @@ public class LinkedListTest
         // Add element
         ll.addFront( nodeData );
 
-        // Confirm size & not empty
-        assertTrue( !ll.isEmpty() );
+        // Confirm size
         confirmSize( 1 );
 
         // Confirm element is at front and tail of list
