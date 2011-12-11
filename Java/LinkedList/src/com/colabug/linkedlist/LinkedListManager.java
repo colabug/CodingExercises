@@ -4,12 +4,12 @@ import java.lang.*;
 
 public class LinkedListManager
 {
-    LinkedList ll;
+    LinkedList<Integer> ll;
     private String[] arguments;
 
     LinkedListManager()
     {
-        ll = new LinkedList();
+        ll = new LinkedList<Integer>();
     }
 
     public void createLinkedListManager( String argv[] )
