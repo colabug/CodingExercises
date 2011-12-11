@@ -121,14 +121,23 @@ public class LinkedList
         // Empty list
         if ( isEmpty() )
         {
-            return;
         }
         // Single item list
         else if ( size == 1 )
         {
             head = null;
             size = 0;
-            return;
+        }
+        // Greater than one
+        else
+        {
+            // Remove node
+            Node newHead = head.next;
+            head.next = null;
+            head = newHead;
+
+            // Update size
+            size--;
         }
     }
 }

@@ -1,5 +1,4 @@
 import com.colabug.LinkedList;
-
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -196,5 +195,26 @@ public class LinkedListTest
         ll.addFront( nodeData );
         ll.removeHead();
         confirmSize( 0 );
+    }
+
+    @Test
+    public void testRemoveHeadFromGeneralList()
+    {
+        int size = createGeneralList();
+        ll.removeHead();
+
+        // Confirm list shortened and new head chosen
+        confirmSize( size - 1 );
+        assertEquals( nodeData2, ll.getHead() );
+    }
+
+    private int createGeneralList()
+    {
+        ll.addBack( nodeData );
+        ll.addBack( nodeData2 );
+        ll.addBack( nodeData3 );
+        ll.addBack( nodeData4 );
+
+        return 4;
     }
 }
