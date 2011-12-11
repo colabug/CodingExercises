@@ -201,6 +201,12 @@ public class LinkedList
             removeHead();
             return;
         }
+        // Remove tail
+        else if ( i == size - 1 )
+        {
+            removeTail();
+            return;
+        }
 
         size--;
     }
