@@ -64,12 +64,7 @@ public class LinkedList<T>
 
     public boolean isEmpty()
     {
-        if ( head == null )
-        {
-            return true;
-        }
-
-        return false;
+        return head == null;
     }
 
     public void printList()
@@ -148,7 +143,6 @@ public class LinkedList<T>
     {
         if ( size == 0 )
         {
-            return;
         }
         // Single item list
         else if ( size == 1 )
