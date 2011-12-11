@@ -107,8 +107,13 @@ public class LinkedListTest
         confirmSize( 4 );
 
         // Confirm string is correct
-        String expectedString = nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
+        String expectedString = generateBackwardsString();
         assertEquals( expectedString, ll.toString() );
+    }
+
+    private String generateBackwardsString()
+    {
+        return nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
     }
 
     @Test
@@ -165,8 +170,13 @@ public class LinkedListTest
         confirmSize( 4 );
 
         // Confirm string is correct
-        String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
+        String expectedString = generateForwardString();
         assertEquals( expectedString, ll.toString() );
+    }
+
+    private String generateForwardString()
+    {
+        return nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
     }
 
     @Test
