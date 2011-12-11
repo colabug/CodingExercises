@@ -296,4 +296,12 @@ public class LinkedListTest
         confirmSize( size - 1 );
         assertEquals( nodeData3, ll.getTail().data );
     }
+
+    @Test
+    public void testRemoveElementAtArbitraryIndex()
+    {
+        int size = createGeneralList();
+        ll.removeAtIndex();
+        confirmSize( size - 1 );
+    }
 }

@@ -186,4 +186,9 @@ public class LinkedList
         head = tail = null;
         size = 0;
     }
+
+    public void removeAtIndex()
+    {
+        size--;
+    }
 }
