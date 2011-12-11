@@ -182,4 +182,11 @@ public class LinkedListTest
         assertEquals( nodeData4, ll.getTail() );
     }
 
+    @Test
+    public void testRemoveHeadFromEmptyList()
+    {
+        assertTrue( ll.isEmpty() );
+        ll.removeHead();
+        confirmSize( 0 );
+    }
 }

@@ -115,4 +115,13 @@ public class LinkedList
 
         return string.trim();
     }
+
+    public void removeHead()
+    {
+        // Empty list
+        if ( isEmpty() )
+        {
+            return;
+        }
+    }
 }
