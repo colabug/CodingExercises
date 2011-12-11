@@ -90,9 +90,9 @@ public class LinkedList
         return size;
     }
 
-    public int getHead()
+    public Node getHead()
     {
-        return head.data;
+        return head;
     }
 
     public int getTail()

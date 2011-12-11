@@ -38,7 +38,7 @@ public class LinkedListTest
         confirmSize( 1 );
 
         // Confirm element is at front and tail of list
-        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getHead().data );
         assertEquals( nodeData, ll.getTail() );
     }
 
@@ -70,7 +70,7 @@ public class LinkedListTest
         confirmSize( 2 );
 
         // Confirm second element added is the head
-        assertEquals( nodeData2, ll.getHead() );
+        assertEquals( nodeData2, ll.getHead().data );
 
         // Confirm first element added is the tail
         assertEquals( nodeData, ll.getTail() );
@@ -86,7 +86,7 @@ public class LinkedListTest
         confirmSize( 3 );
 
         // Confirm third element added is the head
-        assertEquals( nodeData3, ll.getHead() );
+        assertEquals( nodeData3, ll.getHead().data );
 
         // Confirm first element added is the tail
         assertEquals( nodeData, ll.getTail() );
@@ -114,7 +114,7 @@ public class LinkedListTest
         confirmSize( 1 );
 
         // Confirm element is head and tail
-        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getHead().data );
         assertEquals( nodeData, ll.getTail() );
     }
 
@@ -127,7 +127,7 @@ public class LinkedListTest
         confirmSize( 2 );
 
         // Confirm first element added is the head
-        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getHead().data );
 
         // Confirm last element added is the tail
         assertEquals( nodeData2, ll.getTail() );
@@ -143,7 +143,7 @@ public class LinkedListTest
         confirmSize( 3 );
 
         // Confirm first element added is the head
-        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getHead().data );
 
         // Confirm last element added is the tail
         assertEquals( nodeData3, ll.getTail() );
@@ -175,7 +175,7 @@ public class LinkedListTest
         // End list: 2 4 17 3
 
         // Confirm head element
-        assertEquals( nodeData3, ll.getHead() );
+        assertEquals( nodeData3, ll.getHead().data );
 
         // Confirm tail element
         assertEquals( nodeData4, ll.getTail() );
@@ -205,7 +205,7 @@ public class LinkedListTest
 
         // Confirm list shortened and new head chosen
         confirmSize( size - 1 );
-        assertEquals( nodeData2, ll.getHead() );
+        assertEquals( nodeData2, ll.getHead().data );
     }
 
     @Ignore
