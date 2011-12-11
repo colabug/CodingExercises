@@ -11,6 +11,5 @@ public class Node
     {
         this.data = data;
         this.next = next;
-        System.out.println("Node created! Data = " + data);
     }
 }
