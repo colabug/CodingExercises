@@ -125,9 +125,7 @@ public class LinkedList
         // Single item list
         else if ( size == 1 )
         {
-            head = null;
-            tail = null;
-            size = 0;
+            clearMostlyDeadList();
         }
         // Greater than one
         else
@@ -148,5 +146,12 @@ public class LinkedList
         {
             return;
         }
+    }
+
+    private void clearMostlyDeadList()
+    {
+        head.next = null;
+        head = tail = null;
+        size = 0;
     }
 }
