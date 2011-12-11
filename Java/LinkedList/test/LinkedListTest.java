@@ -25,8 +25,15 @@ public class LinkedListTest
     @Test
     public void newListIsEmpty()
     {
-        // Confirm list is empty
+        confirmListIsEmpty();
+    }
+
+    @Ignore
+    private void confirmListIsEmpty()
+    {
         confirmSize( 0 );
+        assertNull( ll.getHead() );
+        assertNull( ll.getTail() );
     }
 
     @Test
@@ -185,10 +192,9 @@ public class LinkedListTest
     @Test
     public void testRemoveHeadFromEmptyList()
     {
-        confirmSize( 0 );
+        confirmListIsEmpty();
         ll.removeHead();
-        confirmSize( 0 );
-        assertNull( ll.getHead() );
+        confirmListIsEmpty();
     }
 
     @Test
@@ -225,8 +231,8 @@ public class LinkedListTest
     @Test
     public void testRemoveTailFromEmptyList()
     {
-        confirmSize( 0 );
+        confirmListIsEmpty();
         ll.removeTail();
-        confirmSize( 0 );
+        confirmListIsEmpty();
     }
 }
