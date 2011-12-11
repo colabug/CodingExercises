@@ -138,6 +138,11 @@ public class LinkedList
             // Update size
             size--;
         }
+        // Something bad happened
+        else
+        {
+            throw new IllegalStateException( "Error with size of list: " + size );
+        }
     }
 
     public void removeTail()
@@ -150,6 +155,11 @@ public class LinkedList
         else if ( size == 1 )
         {
             clearMostlyDeadList();
+        }
+        // Something bad happened
+        else
+        {
+            throw new IllegalStateException( "Error with size of list: " + size );
         }
     }
 
