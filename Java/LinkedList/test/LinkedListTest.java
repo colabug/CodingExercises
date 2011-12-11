@@ -40,7 +40,7 @@ public class LinkedListTest
 
         // Confirm element is at front and tail of list
         assertEquals( nodeData, ll.getHead().data );
-        assertEquals( nodeData, ll.getTail() );
+        assertEquals( nodeData, ll.getTail().data );
     }
 
     @Ignore
@@ -74,7 +74,7 @@ public class LinkedListTest
         assertEquals( nodeData2, ll.getHead().data );
 
         // Confirm first element added is the tail
-        assertEquals( nodeData, ll.getTail() );
+        assertEquals( nodeData, ll.getTail().data );
     }
 
     @Test
@@ -90,7 +90,7 @@ public class LinkedListTest
         assertEquals( nodeData3, ll.getHead().data );
 
         // Confirm first element added is the tail
-        assertEquals( nodeData, ll.getTail() );
+        assertEquals( nodeData, ll.getTail().data );
     }
 
     @Test
@@ -116,7 +116,7 @@ public class LinkedListTest
 
         // Confirm element is head and tail
         assertEquals( nodeData, ll.getHead().data );
-        assertEquals( nodeData, ll.getTail() );
+        assertEquals( nodeData, ll.getTail().data );
     }
 
     @Test
@@ -131,7 +131,7 @@ public class LinkedListTest
         assertEquals( nodeData, ll.getHead().data );
 
         // Confirm last element added is the tail
-        assertEquals( nodeData2, ll.getTail() );
+        assertEquals( nodeData2, ll.getTail().data );
     }
 
     @Test
@@ -147,7 +147,7 @@ public class LinkedListTest
         assertEquals( nodeData, ll.getHead().data );
 
         // Confirm last element added is the tail
-        assertEquals( nodeData3, ll.getTail() );
+        assertEquals( nodeData3, ll.getTail().data );
     }
 
     @Test
@@ -179,7 +179,7 @@ public class LinkedListTest
         assertEquals( nodeData3, ll.getHead().data );
 
         // Confirm tail element
-        assertEquals( nodeData4, ll.getTail() );
+        assertEquals( nodeData4, ll.getTail().data );
     }
 
     @Test

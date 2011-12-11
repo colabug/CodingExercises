@@ -95,9 +95,9 @@ public class LinkedList
         return head;
     }
 
-    public int getTail()
+    public Node getTail()
     {
-        return tail.data;
+        return tail;
     }
 
     @Override
