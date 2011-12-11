@@ -347,10 +347,12 @@ public class LinkedListTest
     @Test
     public void testRemoveElementAtArbitraryIndex()
     {
-        // Create list and index 3
+        // Create list and index 2
         int size = createGeneralList();
-        ll.removeAtIndex( 3 );
+        ll.removeAtIndex( 2 );
 
+        String expectedString = nodeData + " " + nodeData2 + " " + nodeData4;
         confirmSize( size - 1 );
+        assertEquals( expectedString, ll.toString() );
     }
 }

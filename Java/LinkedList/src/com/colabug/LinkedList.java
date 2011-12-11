@@ -199,15 +199,29 @@ public class LinkedList
         if ( i == 0 )
         {
             removeHead();
-            return;
         }
         // Remove tail
         else if ( i == size - 1 )
         {
             removeTail();
-            return;
         }
+        // General case
+        else
+        {
+            // Navigate to index
+            int count = 0;
+            Node currentNode = head;
+            Node previousNode = head;
+            for (; count < i; count++,
+                 previousNode = currentNode,
+                 currentNode = currentNode.next )
+            {
+            }
 
-        size--;
+            // Remove current node
+            previousNode.next = currentNode.next;
+            currentNode.next = null;
+            size--;
+        }
     }
 }
