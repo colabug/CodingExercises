@@ -3,9 +3,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNull;
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.*;
 
 public class LinkedListTest
 {
@@ -298,10 +296,27 @@ public class LinkedListTest
     }
 
     @Test
+    public void testRemoveElementWithNegativeIndex()
+    {
+        try
+        {
+            ll.removeAtIndex( -1 );
+        }
+        catch ( IndexOutOfBoundsException e )
+        {
+            return;
+        }
+
+        fail();
+    }
+
+    @Test
     public void testRemoveElementAtArbitraryIndex()
     {
+        // Create list and index 3
         int size = createGeneralList();
-        ll.removeAtIndex();
+        ll.removeAtIndex( 3 );
+
         confirmSize( size - 1 );
     }
 }

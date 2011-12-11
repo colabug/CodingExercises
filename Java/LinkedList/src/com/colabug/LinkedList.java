@@ -187,8 +187,12 @@ public class LinkedList
         size = 0;
     }
 
-    public void removeAtIndex()
+    public void removeAtIndex( int i )
     {
+        if ( i >= size || i < 0 )
+        {
+            throw new IndexOutOfBoundsException( "Index " + i + " is outside the bounds of the list. List size = " + size );
+        }
         size--;
     }
 }
