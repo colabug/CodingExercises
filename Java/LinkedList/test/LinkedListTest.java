@@ -1,5 +1,7 @@
 import com.colabug.LinkedList;
+
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
@@ -33,15 +35,19 @@ public class LinkedListTest
         // Add element
         ll.addFront( nodeData );
 
-        // Confirm not empty
+        // Confirm size & not empty
         assertTrue( !ll.isEmpty() );
-
-        // Confirm size
-        assertEquals( 1, ll.size() );
+        confirmSize( 1 );
 
         // Confirm element is at front and tail of list
         assertEquals( nodeData, ll.getHead() );
         assertEquals( nodeData, ll.getTail() );
+    }
+
+    @Ignore
+    private void confirmSize( int expectedSize )
+    {
+        assertEquals( expectedSize, ll.size() );
     }
 
     @Test
@@ -50,15 +56,13 @@ public class LinkedListTest
         // Add elements
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
+        confirmSize( 2 );
 
         // Confirm second element added is the head
         assertEquals( nodeData2, ll.getHead() );
 
         // Confirm first element added is the tail
         assertEquals( nodeData, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 2, ll.size() );
     }
 
     @Test
@@ -68,15 +72,13 @@ public class LinkedListTest
         ll.addFront( nodeData );
         ll.addFront( nodeData2 );
         ll.addFront( nodeData3 );
+        confirmSize( 3 );
 
         // Confirm third element added is the head
         assertEquals( nodeData3, ll.getHead() );
 
         // Confirm first element added is the tail
         assertEquals( nodeData, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 3, ll.size() );
     }
 
     @Test
@@ -84,13 +86,11 @@ public class LinkedListTest
     {
         // Add back
         ll.addBack( nodeData );
+        confirmSize( 1 );
 
         // Confirm element is head and tail
         assertEquals( nodeData, ll.getHead() );
         assertEquals( nodeData, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 1, ll.size() );
     }
 
     @Test
@@ -99,15 +99,13 @@ public class LinkedListTest
         // Add elements
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
+        confirmSize( 2 );
 
         // Confirm first element added is the head
         assertEquals( nodeData, ll.getHead() );
 
         // Confirm last element added is the tail
         assertEquals( nodeData2, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 2, ll.size() );
     }
 
     @Test
@@ -117,15 +115,13 @@ public class LinkedListTest
         ll.addBack( nodeData );
         ll.addBack( nodeData2 );
         ll.addBack( nodeData3 );
+        confirmSize( 3 );
 
         // Confirm first element added is the head
         assertEquals( nodeData, ll.getHead() );
 
         // Confirm last element added is the tail
         assertEquals( nodeData3, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 3, ll.size() );
     }
 
     @Test
@@ -136,6 +132,7 @@ public class LinkedListTest
         ll.addBack( nodeData2 );  // 17
         ll.addFront( nodeData3 ); // 2
         ll.addBack( nodeData4 );  // 3
+        confirmSize( 4 );
         // End list: 2 4 17 3
 
         // Confirm head element
@@ -143,9 +140,6 @@ public class LinkedListTest
 
         // Confirm tail element
         assertEquals( nodeData4, ll.getTail() );
-
-        // Confirm size
-        assertEquals( 4, ll.size() );
     }
 
     @Test
@@ -155,13 +149,11 @@ public class LinkedListTest
         ll.addBack( nodeData2 );
         ll.addBack( nodeData3 );
         ll.addBack( nodeData4 );
+        confirmSize( 4 );
 
         // Confirm string is correct
         String expectedString = nodeData + " " + nodeData2 + " " + nodeData3 + " " + nodeData4;
         assertEquals( expectedString, ll.toString() );
-
-        // Confirm size
-        assertEquals( 4, ll.size() );
     }
 
     @Test
@@ -171,12 +163,10 @@ public class LinkedListTest
         ll.addFront( nodeData2 );
         ll.addFront( nodeData3 );
         ll.addFront( nodeData4 );
+        confirmSize( 4 );
 
         // Confirm string is correct
         String expectedString = nodeData4 + " " + nodeData3 + " " + nodeData2 + " " + nodeData;
         assertEquals( expectedString, ll.toString() );
-
-        // Confirm size
-        assertEquals( 4, ll.size() );
     }
 }
