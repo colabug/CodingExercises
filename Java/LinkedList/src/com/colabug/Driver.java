@@ -13,5 +13,6 @@ public class Driver
 
         // Create linked list
         llm.createLinkedListManager(argv);
+        llm.run();
     }
 }
