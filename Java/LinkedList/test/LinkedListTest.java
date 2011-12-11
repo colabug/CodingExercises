@@ -59,4 +59,14 @@ public class LinkedListTest
         assertEquals( nodeData, ll.getTail() );
     }
 
+    @Test
+    public void testAdd2ElementsToBack()
+    {
+        // Add elements
+        ll.addBack( nodeData );
+        ll.addBack( nodeData2 );
+
+        // Confirm last element added is the tail
+        assertEquals( nodeData2, ll.getTail() );
+    }
 }
