@@ -11,8 +11,8 @@ public class Stack<T>
         return true;
     }
 
-    public void push( T i )
+    public void push( T data )
     {
-        linkedList.addBack( i );
+        linkedList.addBack( data );
     }
 }
