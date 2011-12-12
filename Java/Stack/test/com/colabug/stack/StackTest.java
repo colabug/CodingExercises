@@ -8,7 +8,7 @@ import static junit.framework.Assert.assertTrue;
 public class StackTest
 {
     private Stack<Integer> stack;
-    private static int nodeData;
+    private static Integer nodeData;
 
     @Before
     public void setUp()
