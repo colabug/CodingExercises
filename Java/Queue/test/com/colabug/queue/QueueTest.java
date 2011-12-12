@@ -32,10 +32,16 @@ public class QueueTest
     public void testEnqueueOneElement()
     {
         // Populate queue
-        integerQueue.enqueue( data );
+        populateSingleItemQueue();
 
         // Check ends
         confirmFrontAndBackElements( data, data );
+    }
+
+    @Ignore
+    private void populateSingleItemQueue()
+    {
+        integerQueue.enqueue( data );
     }
 
     @Ignore
@@ -50,11 +56,17 @@ public class QueueTest
     public void testEnqueueTwoElements()
     {
         // Populate queue
-        integerQueue.enqueue( data );
-        integerQueue.enqueue( data2 );
+        populateTwoItemQueue();
 
         // Check ends
         confirmFrontAndBackElements( data, data2 );
+    }
+
+    @Ignore
+    private void populateTwoItemQueue()
+    {
+        integerQueue.enqueue( data );
+        integerQueue.enqueue( data2 );
     }
 
     @Test
@@ -86,7 +98,7 @@ public class QueueTest
     public void testDequeueFromSingleItemQueue()
     {
         // Populate queue & dequeue
-        integerQueue.enqueue( data );
+        populateSingleItemQueue();
         integerQueue.dequeue();
 
         // Make sure empty
@@ -97,8 +109,7 @@ public class QueueTest
     public void testDequeueFromTwoItemQueue()
     {
         // Populate queue & dequeue
-        integerQueue.enqueue( data );
-        integerQueue.enqueue( data2 );
+        populateTwoItemQueue();
         integerQueue.dequeue();
 
         // Verify queue only has one item
