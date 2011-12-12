@@ -12,6 +12,8 @@ public class QueueTest
     static private Queue<Integer> integerQueue;
     static private Integer data  = 5;
     static private Integer data2 = 6;
+    static private Integer data3 = 7;
+    static private Integer data4 = 8;
 
     @Before
     public void setUp()
@@ -52,5 +54,24 @@ public class QueueTest
 
         // Check ends
         confirmFrontAndBackElements( data, data2 );
+    }
+
+    @Test
+    public void testEnqueueArbitraryNumberElements()
+    {
+        // Populate queue
+        populateArbitraryQueue();
+
+        // Check ends
+        confirmFrontAndBackElements( data, data4 );
+    }
+
+    @Ignore
+    private void populateArbitraryQueue()
+    {
+        integerQueue.enqueue( data );
+        integerQueue.enqueue( data2 );
+        integerQueue.enqueue( data3 );
+        integerQueue.enqueue( data4 );
     }
 }
