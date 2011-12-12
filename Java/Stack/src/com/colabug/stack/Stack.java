@@ -1,8 +1,10 @@
 package com.colabug.stack;
 
-import java.lang.*;
-
-public class Stack
+public class Stack<T>
 {
 
+    public boolean isEmpty()
+    {
+        return true;
+    }
 }
