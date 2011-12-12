@@ -10,6 +10,7 @@ public class QueueTest
 {
     static private Queue<Integer> integerQueue;
     static private Integer data = 5;
+    static private Integer data2 = 6;
 
     @Before
     public void setUp()
@@ -30,5 +31,15 @@ public class QueueTest
         assertTrue( !integerQueue.isEmpty() );
         assertEquals( data, integerQueue.front() );
         assertEquals( data, integerQueue.back() );
+    }
+
+    @Test
+    public  void testEnqueueTwoElements()
+    {
+        integerQueue.enqueue( data );
+        integerQueue.enqueue( data2 );
+        assertTrue( !integerQueue.isEmpty() );
+        assertEquals( data, integerQueue.front() );
+        assertEquals( data2, integerQueue.back() );
     }
 }
