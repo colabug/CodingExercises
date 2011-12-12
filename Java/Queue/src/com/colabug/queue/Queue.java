@@ -10,4 +10,19 @@ public class Queue<T>
     {
         return linkedList.isEmpty();
     }
+
+    public void enqueue( T data )
+    {
+        linkedList.addBack( data );
+    }
+
+    public T front()
+    {
+        return linkedList.getHead();
+    }
+
+    public T back()
+    {
+        return linkedList.getTail();
+    }
 }
