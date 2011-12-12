@@ -43,7 +43,7 @@ public class StackTest
     @Test
     public void testPopEmptyStack()
     {
-        assertNull( stack.top() );
+        assertNull( stack.pop() );
     }
 
     @Test
