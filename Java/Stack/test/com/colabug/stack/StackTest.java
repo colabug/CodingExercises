@@ -45,4 +45,15 @@ public class StackTest
     {
         assertNull( stack.top() );
     }
+
+    @Test
+    public void testPop()
+    {
+        // Populate stack
+        createArbitraryStack();
+
+        // Check top element
+        Integer data = stack.pop();
+        assertEquals( nodeData, data );
+    }
 }
