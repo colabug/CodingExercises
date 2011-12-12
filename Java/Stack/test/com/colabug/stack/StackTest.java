@@ -10,13 +10,12 @@ import static junit.framework.Assert.assertTrue;
 public class StackTest
 {
     private Stack<Integer> stack;
-    private static Integer nodeData;
+    private static Integer nodeData = 5;
 
     @Before
     public void setUp()
     {
         stack = new Stack<Integer>();
-        nodeData = 5;
     }
 
     @Test
