@@ -92,4 +92,18 @@ public class QueueTest
         // Make sure empty
         assertTrue( integerQueue.isEmpty() );
     }
+
+    @Test
+    public void testDequeueFromTwoItemQueue()
+    {
+        // Populate queue & dequeue
+        integerQueue.enqueue( data );
+        integerQueue.enqueue( data2 );
+        integerQueue.dequeue();
+
+        // Verify queue only has one item
+        assertTrue( !integerQueue.isEmpty() );
+        assertEquals( data2, integerQueue.front() );
+        assertEquals( data2, integerQueue.back() );
+    }
 }
