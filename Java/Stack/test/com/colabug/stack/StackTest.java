@@ -9,6 +9,8 @@ public class StackTest
 {
     private Stack<Integer> stack;
     private static Integer nodeData = 5;
+    private static Integer nodeData2 = 6;
+    private static Integer nodeData3 = 7;
 
     @Before
     public void setUp()
@@ -25,9 +27,17 @@ public class StackTest
     @Test
     public void testPush()
     {
-        stack.push( nodeData );
+        createArbitraryStack();
         assertFalse( stack.isEmpty() );
         assertEquals( nodeData, stack.top() );
+    }
+
+    private void createArbitraryStack()
+    {
+        stack.push( nodeData );
+        stack.push( nodeData2 );
+        stack.push( nodeData3 );
+        stack.push( nodeData );
     }
 
     @Test
