@@ -16,6 +16,13 @@ public class Stack<T>
         linkedList.addBack( data );
     }
 
+    public T pop()
+    {
+        T data = linkedList.getTail();
+        linkedList.removeTail();
+        return data;
+    }
+
     public T top()
     {
         return linkedList.getTail();
