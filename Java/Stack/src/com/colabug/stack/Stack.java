@@ -8,7 +8,7 @@ public class Stack<T>
 
     public boolean isEmpty()
     {
-        return true;
+        return linkedList.isEmpty();
     }
 
     public void push( T data )
