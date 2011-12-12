@@ -3,6 +3,7 @@ package com.colabug.stack;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
@@ -29,5 +30,6 @@ public class StackTest
     {
         stack.push( nodeData );
         assertFalse( stack.isEmpty() );
+        assertEquals( nodeData, stack.top() );
     }
 }

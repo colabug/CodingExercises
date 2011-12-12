@@ -15,4 +15,9 @@ public class Stack<T>
     {
         linkedList.addBack( data );
     }
+
+    public T top()
+    {
+        return linkedList.getTail();
+    }
 }
