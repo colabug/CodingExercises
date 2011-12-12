@@ -1,6 +1,6 @@
 package com.colabug.queue;
 
-import java.util.LinkedList;
+import com.colabug.linkedlist.LinkedList;
 
 public class Queue<T>
 {
