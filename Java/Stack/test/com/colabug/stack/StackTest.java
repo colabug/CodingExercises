@@ -1,15 +1,31 @@
 package com.colabug.stack;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertTrue;
 
 public class StackTest
 {
+    private Stack<Integer> stack;
+    private static int nodeData;
+
+    @Before
+    public void setUp()
+    {
+        stack = new Stack<Integer>();
+        nodeData = 5;
+    }
+
     @Test
     public void testEmptyStack()
     {
-        Stack<Integer> stack = new Stack<Integer>();
         assertTrue( stack.isEmpty() );
+    }
+
+    @Test
+    public void testPush()
+    {
+        stack.push( nodeData );
     }
 }
