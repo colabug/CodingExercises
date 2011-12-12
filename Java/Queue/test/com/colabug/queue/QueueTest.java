@@ -131,4 +131,20 @@ public class QueueTest
         assertEquals( data3, integerQueue.front() );
         assertEquals( data4, integerQueue.back() );
     }
+
+    @Test
+    public void testDequeueingManyMoreTimesThanItems()
+    {
+        // Populate queue
+        populateArbitraryQueue();
+
+        // Dequeue a lot
+        for ( int i = 0; i < 200; i++ )
+        {
+            integerQueue.dequeue();
+        }
+
+        // Verify empty
+        assertTrue( integerQueue.isEmpty() );
+    }
 }
