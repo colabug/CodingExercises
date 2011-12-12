@@ -81,4 +81,15 @@ public class QueueTest
     {
         assertNull( integerQueue.dequeue() );
     }
+
+    @Test
+    public void testDequeueFromSingleItemQueue()
+    {
+        // Populate queue & dequeue
+        integerQueue.enqueue( data );
+        integerQueue.dequeue();
+
+        // Make sure empty
+        assertTrue( integerQueue.isEmpty() );
+    }
 }
