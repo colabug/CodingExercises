@@ -77,7 +77,7 @@ public class QueueTest
     }
 
     @Test
-    public void testDequeueFromEmptyList()
+    public void testDequeueFromEmptyQueue()
     {
         assertNull( integerQueue.dequeue() );
     }
