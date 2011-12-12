@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNull;
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.*;
 
 public class QueueTest
 {
@@ -47,7 +45,7 @@ public class QueueTest
     @Ignore
     private void confirmFrontAndBackElements( Integer front, Integer back )
     {
-        assertTrue( !integerQueue.isEmpty() );
+        assertFalse( integerQueue.isEmpty() );
         assertEquals( front, integerQueue.front() );
         assertEquals( back, integerQueue.back() );
     }
@@ -113,7 +111,7 @@ public class QueueTest
         integerQueue.dequeue();
 
         // Verify queue only has one item
-        assertTrue( !integerQueue.isEmpty() );
+        assertFalse( integerQueue.isEmpty() );
         assertEquals( data2, integerQueue.front() );
         assertEquals( data2, integerQueue.back() );
     }
@@ -127,7 +125,7 @@ public class QueueTest
         integerQueue.dequeue();
 
         // Verify queue contents
-        assertTrue( !integerQueue.isEmpty() );
+        assertFalse( integerQueue.isEmpty() );
         assertEquals( data3, integerQueue.front() );
         assertEquals( data4, integerQueue.back() );
     }
