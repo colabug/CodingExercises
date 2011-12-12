@@ -56,4 +56,20 @@ public class StackTest
         Integer data = stack.pop();
         assertEquals( nodeData, data );
     }
+
+    @Test
+    public void testPopLotsOfTimes()
+    {
+        // Populate stack
+        createArbitraryStack();
+
+        // Pop a lot
+        for ( int i = 0; i <= 200; i++ )
+        {
+            stack.pop();
+        }
+
+        // Verify empty
+        assertTrue( stack.isEmpty() );
+    }
 }
