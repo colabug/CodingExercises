@@ -25,4 +25,11 @@ public class Queue<T>
     {
         return linkedList.getTail();
     }
+
+    public T dequeue()
+    {
+        T data = linkedList.getHead();
+        linkedList.removeHead();
+        return data;
+    }
 }

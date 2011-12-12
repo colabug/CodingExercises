@@ -5,6 +5,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 public class QueueTest
@@ -73,5 +74,11 @@ public class QueueTest
         integerQueue.enqueue( data2 );
         integerQueue.enqueue( data3 );
         integerQueue.enqueue( data4 );
+    }
+
+    @Test
+    public void testDequeueFromEmptyList()
+    {
+        assertNull( integerQueue.dequeue() );
     }
 }
