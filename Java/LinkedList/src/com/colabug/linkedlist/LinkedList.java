@@ -4,8 +4,8 @@ import java.lang.*;
 
 public class LinkedList<T>
 {
-    private Node head;
-    private Node tail;
+    private Node<T> head;
+    private Node<T> tail;
     private int size = 0;
 
     public LinkedList()
@@ -84,14 +84,23 @@ public class LinkedList<T>
         return size;
     }
 
-    public Node getHead()
+    public T getHead()
     {
-        return head;
+        if ( head == null )
+        {
+            return null;
+        }
+
+        return head.data;
     }
 
-    public Node getTail()
+    public T getTail()
     {
-        return tail;
+        if ( tail == null )
+        {
+            return null;
+        }
+        return tail.data;
     }
 
     @Override
@@ -125,7 +134,7 @@ public class LinkedList<T>
         else if ( size > 1 )
         {
             // Remove node
-            Node newHead = head.next;
+            Node<T> newHead = head.next;
             head.next = null;
             head = newHead;
 
@@ -153,7 +162,7 @@ public class LinkedList<T>
         else if ( size > 1 )
         {
             // Navigate to the node before the tail
-            Node newTail = head;
+            Node<T> newTail = head;
             for (; newTail.next != tail;
                  newTail = newTail.next )
             {

@@ -43,8 +43,8 @@ public class IntLinkedListTest
         confirmSize( 1 );
 
         // Confirm element is at front and tail of list
-        assertEquals( nodeData, ll.getHead().data );
-        assertEquals( nodeData, ll.getTail().data );
+        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Ignore
@@ -75,10 +75,10 @@ public class IntLinkedListTest
         confirmSize( 2 );
 
         // Confirm second element added is the head
-        assertEquals( nodeData2, ll.getHead().data );
+        assertEquals( nodeData2, ll.getHead() );
 
         // Confirm first element added is the tail
-        assertEquals( nodeData, ll.getTail().data );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Test
@@ -91,10 +91,10 @@ public class IntLinkedListTest
         confirmSize( 3 );
 
         // Confirm third element added is the head
-        assertEquals( nodeData3, ll.getHead().data );
+        assertEquals( nodeData3, ll.getHead() );
 
         // Confirm first element added is the tail
-        assertEquals( nodeData, ll.getTail().data );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Test
@@ -125,8 +125,8 @@ public class IntLinkedListTest
         confirmSize( 1 );
 
         // Confirm element is head and tail
-        assertEquals( nodeData, ll.getHead().data );
-        assertEquals( nodeData, ll.getTail().data );
+        assertEquals( nodeData, ll.getHead() );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Test
@@ -138,10 +138,10 @@ public class IntLinkedListTest
         confirmSize( 2 );
 
         // Confirm first element added is the head
-        assertEquals( nodeData, ll.getHead().data );
+        assertEquals( nodeData, ll.getHead() );
 
         // Confirm last element added is the tail
-        assertEquals( nodeData2, ll.getTail().data );
+        assertEquals( nodeData2, ll.getTail() );
     }
 
     @Test
@@ -154,10 +154,10 @@ public class IntLinkedListTest
         confirmSize( 3 );
 
         // Confirm first element added is the head
-        assertEquals( nodeData, ll.getHead().data );
+        assertEquals( nodeData, ll.getHead() );
 
         // Confirm last element added is the tail
-        assertEquals( nodeData3, ll.getTail().data );
+        assertEquals( nodeData3, ll.getTail() );
     }
 
     @Test
@@ -192,10 +192,10 @@ public class IntLinkedListTest
         // End list: 2 4 17 3
 
         // Confirm head element
-        assertEquals( nodeData3, ll.getHead().data );
+        assertEquals( nodeData3, ll.getHead() );
 
         // Confirm tail element
-        assertEquals( nodeData4, ll.getTail().data );
+        assertEquals( nodeData4, ll.getTail() );
     }
 
     @Test
@@ -228,7 +228,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and changed
         confirmSize( 1 );
-        assertEquals( nodeData2, ll.getHead().data );
+        assertEquals( nodeData2, ll.getHead() );
     }
 
     @Ignore
@@ -247,7 +247,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and new head chosen
         confirmSize( size - 1 );
-        assertEquals( nodeData2, ll.getHead().data );
+        assertEquals( nodeData2, ll.getHead() );
     }
 
     @Ignore
@@ -291,7 +291,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and new tail chosen
         confirmSize( 1 );
-        assertEquals( nodeData, ll.getTail().data );
+        assertEquals( nodeData, ll.getTail() );
     }
 
     @Test
@@ -303,7 +303,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and new tail chosen
         confirmSize( size - 1 );
-        assertEquals( nodeData3, ll.getTail().data );
+        assertEquals( nodeData3, ll.getTail() );
     }
 
     @Test
@@ -330,7 +330,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and new head chosen
         confirmSize( size - 1 );
-        assertEquals( nodeData2, ll.getHead().data );
+        assertEquals( nodeData2, ll.getHead() );
     }
 
     @Test
@@ -342,7 +342,7 @@ public class IntLinkedListTest
 
         // Confirm list shortened and new tail chosen
         confirmSize( size - 1 );
-        assertEquals( nodeData3, ll.getTail().data );
+        assertEquals( nodeData3, ll.getTail() );
     }
 
     @Test
