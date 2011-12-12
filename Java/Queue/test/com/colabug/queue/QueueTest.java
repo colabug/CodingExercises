@@ -8,7 +8,7 @@ import static junit.framework.Assert.assertTrue;
 
 public class QueueTest
 {
-    private Queue<Integer> integerQueue;
+    static private Queue<Integer> integerQueue;
     static private Integer data = 5;
 
     @Before
